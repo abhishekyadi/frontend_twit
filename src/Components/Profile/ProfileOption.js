@@ -19,7 +19,8 @@ export default function ProfileOption() {
 
   const DeletePost=(posts)=>{
     if(window.confirm('Do you really want to delete this post?')){
-     fetch(`http://localhost:5000/delposts/${posts}`,{
+    //  fetch(`http://localhost:5000/delposts/${posts}`,{
+     fetch(`https://backend-twit2.onrender.com/delposts/${posts}`,{
     
       method:'DELETE',
       headers:{
@@ -45,7 +46,8 @@ export default function ProfileOption() {
 
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`,{
+    // fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))._id}`,{
+    fetch(`https://backend-twit2.onrender.com/user/${JSON.parse(localStorage.getItem("user"))._id}`,{
     
       headers:{
         'Content-Type':'application/json',

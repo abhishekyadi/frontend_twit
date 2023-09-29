@@ -23,7 +23,8 @@ export default function UserProfileOption() {
 
     // to follow user
     const followUser=(userId)=>{
-      fetch("http://localhost:5000/follow",{
+      // fetch("http://localhost:5000/follow",{
+      fetch("https://backend-twit2.onrender.com/follow",{
       
         method:"put",
         headers:{
@@ -44,7 +45,8 @@ export default function UserProfileOption() {
 
         // to unfollow user
         const unfollowUser=(userId)=>{
-          fetch("http://localhost:5000/unfollow",{
+          // fetch("http://localhost:5000/unfollow",{
+          fetch("https://backend-twit2.onrender.com/unfollow",{
           
             method:"put",
             headers:{
@@ -64,7 +66,8 @@ export default function UserProfileOption() {
 
 
   useEffect(()=>{
-     fetch(`http://localhost:5000/user/${userid}`,{
+    //  fetch(`http://localhost:5000/user/${userid}`,{
+     fetch(`https://backend-twit2.onrender.com/user/${userid}`,{
    
       headers:{
         'Content-Type':'application/json',

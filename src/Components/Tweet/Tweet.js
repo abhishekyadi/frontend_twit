@@ -13,7 +13,8 @@ export default function Tweet() {
 const navigate=useNavigate();
   
 useEffect(() => {
-  fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
+  // fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
+  fetch(`https://backend-twit2.onrender.com/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': "Bearer " + localStorage.getItem("jwt")
@@ -32,7 +33,8 @@ useEffect(() => {
   useEffect(()=>{
     // saving post to mongodb
     if(url){
-    fetch("http://localhost:5000/createPost",{
+    // fetch("http://localhost:5000/createPost",{
+    fetch("https://backend-twit2.onrender.com/createPost",{
       method:"post",
       headers:{
         "Content-type":"application/json",

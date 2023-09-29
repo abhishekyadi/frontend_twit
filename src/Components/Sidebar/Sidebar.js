@@ -19,7 +19,8 @@ export default function Sidebar() {
   const [userphoto,setUserphoto] = useState("")
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`,{
+    // fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`,{
+    fetch(`https://backend-twit2.onrender.com/user/${JSON.parse(localStorage.getItem("user"))?._id}`,{
     
     headers:{
       'Content-Type':'application/json',

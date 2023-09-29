@@ -8,7 +8,8 @@ export default function Comment({ toggler, items }) {
   const [userphoto, setUserphoto] = useState("");
 
   const makeComment = (text, id) => {
-    fetch('http://localhost:5000/comment', {
+    // fetch('http://localhost:5000/comment', {
+    fetch('https://backend-twit2.onrender.com/comment', {
       method: 'put',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +41,8 @@ export default function Comment({ toggler, items }) {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
+    // fetch(`http://localhost:5000/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
+    fetch(`https://backend-twit2.onrender.com/user/${JSON.parse(localStorage.getItem("user"))?._id}`, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + localStorage.getItem('jwt')

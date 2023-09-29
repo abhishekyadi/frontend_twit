@@ -57,7 +57,8 @@ export default function ProfilePic({ changeProfile }) {
   };
 
   const postPic = useCallback(() => {
-    fetch('http://localhost:5000/uploadProfilePic', {
+    // fetch('http://localhost:5000/uploadProfilePic', {
+    fetch('https://backend-twit2.onrender.com/uploadProfilePic', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -77,7 +78,8 @@ export default function ProfilePic({ changeProfile }) {
   }, [url, changeProfile]);
 
   const postBgPic = useCallback(() => {
-    fetch('http://localhost:5000/uploadBgProfilePic', {
+    // fetch('http://localhost:5000/uploadBgProfilePic', {
+    fetch('https://backend-twit2.onrender.com/uploadBgProfilePic', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -96,7 +98,8 @@ export default function ProfilePic({ changeProfile }) {
       .catch((err) => console.log(err));
   }, [bgurl, changeProfile]);
   const updateBio = () => {
-    fetch('http://localhost:5000/bio', {
+    // fetch('http://localhost:5000/bio', {
+    fetch('https://backend-twit2.onrender.com/bio', {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',

@@ -23,7 +23,8 @@ export default function MyFollowing() {
     const [data, setData] = useState([]);
     useEffect(() => {
         // fetching all the posts
-        fetch("http://localhost:5000/myfollowingpost", {
+        // fetch("http://localhost:5000/myfollowingpost", {
+        fetch("https://backend-twit2.onrender.com/myfollowingpost", {
             headers: {
                 'Content-Type':'application/json',
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
@@ -48,7 +49,8 @@ export default function MyFollowing() {
 
 
     const likePost= (id) =>{
-         fetch("http://localhost:5000/like", {
+        //  fetch("http://localhost:5000/like", {
+         fetch("https://backend-twit2.onrender.com/like", {
        
             method:"put",
             headers:{
@@ -76,7 +78,8 @@ export default function MyFollowing() {
 
     
     const unlikePost= (id) =>{
-         fetch("http://localhost:5000/unlike", {
+        //  fetch("http://localhost:5000/unlike", {
+         fetch("https://backend-twit2.onrender.com/unlike", {
          
             method:"put",
             headers:{

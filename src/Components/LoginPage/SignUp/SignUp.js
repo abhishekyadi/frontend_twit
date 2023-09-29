@@ -12,7 +12,8 @@ export default function SignUp() {
 const[message,setMessage]=useState("");
  const Navigate=useNavigate();
   const postData=()=>{
-    fetch("http://localhost:5000/signup",{
+    // fetch("http://localhost:5000/signup",{
+    fetch("https://backend-twit2.onrender.com/signup",{
       method:"post",
       headers:{
         "Content-Type":"application/json"

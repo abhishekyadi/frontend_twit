@@ -31,7 +31,8 @@ export default function Post() {
 
 
     const likePost= (id) =>{
-        fetch("http://localhost:5000/like", {
+        // fetch("http://localhost:5000/like", {
+        fetch("https://backend-twit2.onrender.com/like", {
         
             method:"put",
             headers:{
@@ -49,7 +50,8 @@ export default function Post() {
     }
     
     const unlikePost= (id) =>{
-         fetch("http://localhost:5000/unlike", {
+        //  fetch("http://localhost:5000/unlike", {
+         fetch("https://backend-twit2.onrender.com/unlike", {
        
             method:"put",
             headers:{
@@ -79,7 +81,8 @@ export default function Post() {
       }
     useEffect(() => {
         // fetching all the posts
-         fetch("http://localhost:5000/allposts", {
+        //  fetch("http://localhost:5000/allposts", {
+         fetch("https://backend-twit2.onrender.com/allposts", {
         
             headers: {
                 'Content-Type':'application/json',
